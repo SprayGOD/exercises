@@ -1,0 +1,2 @@
+# exercises
+Tasks from EPAM
