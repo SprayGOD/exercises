@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CandyExcercise
+namespace PresentLibrary.SweetsDescription
 {
-    class Program
+    interface IDiabetic
     {
-        static void Main(string[] args)
-        {
-        }
+        bool IsDiabetic { get; set; }
     }
 }

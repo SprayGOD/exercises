@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PresentLibrary
+namespace PresentLibrary.SweetsDescription
 {
-    public class Class1
+    interface ISugarFree
     {
+        bool IsSugarFree { get; set; }
     }
 }
