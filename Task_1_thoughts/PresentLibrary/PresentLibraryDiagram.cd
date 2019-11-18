@@ -3,88 +3,86 @@
   <Class Name="PresentLibrary.Present.Present" BaseTypeListCollapsed="true">
     <Position X="12.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIACAAADAAAADAQAEAABAQAAAAAAAAEAAAEAABQIAA=</HashCode>
+      <HashCode>AAIACAAACAAAADAQAEAABAQAAAAAAAAEAAAEAABQIAA=</HashCode>
       <FileName>Present\Present.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="PresentLibrary.SweetsDescription.Candys.Candy">
+  <Class Name="PresentLibrary.Sweets.Candys.Candy">
     <Position X="6.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
-      <FileName>SweetsDescription\Candys\Candy.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sweets\Candys\Candy.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PresentLibrary.SweetsDescription.Candys.Caramel">
+  <Class Name="PresentLibrary.Sweets.Candys.Caramel">
     <Position X="7.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SweetsDescription\Candys\Caramel.cs</FileName>
+      <FileName>Sweets\Candys\Caramel.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PresentLibrary.SweetsDescription.Candys.ChocolateCandy">
+  <Class Name="PresentLibrary.Sweets.Candys.GlazedCandy">
     <Position X="5.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SweetsDescription\Candys\ChocolateCandy.cs</FileName>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sweets\Candys\GlazedCandy.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PresentLibrary.SweetsDescription.Chocolates.Chocolate">
+  <Class Name="PresentLibrary.Sweets.Chocolates.Chocolate">
     <Position X="3" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAEABAA=</HashCode>
-      <FileName>SweetsDescription\Chocolates\Chocolate.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Sweets\Chocolates\Chocolate.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="PresentLibrary.SweetsDescription.Cookies.Cookie">
+  <Class Name="PresentLibrary.Sweets.Cookies.Cookie">
     <Position X="9.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAABAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SweetsDescription\Cookies\Cookie.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="PresentLibrary.SweetsDescription.Waffles.Waffle">
-    <Position X="0.75" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAIAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SweetsDescription\Waffles\Waffle.cs</FileName>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sweets\Cookies\Cookie.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PresentLibrary.SweetsDescription.Sweets">
+  <Class Name="PresentLibrary.Sweets.Sweet">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAACAAAAAAAAAQAACAAAAgAAAAIAAAAAAA=</HashCode>
-      <FileName>SweetsDescription\Sweets.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAQAACAAAAgAAAAIAAAAAAA=</HashCode>
+      <FileName>Sweets\Sweet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PresentLibrary.Sweets.Waffles.Waffle">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sweets\Waffles\Waffle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="PresentLibrary.Present.IPresent">
     <Position X="14" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAAACAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAACAAACAAAACAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Present\IPresent.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="PresentLibrary.SweetsDescription.IDiabetic">
-    <Position X="12.25" Y="5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
-      <FileName>SweetsDescription\IDiabetic.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="PresentLibrary.SweetsDescription.ISugarFree">
-    <Position X="12.25" Y="6.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SweetsDescription\ISugarFree.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Enum Name="PresentLibrary.SweetsDescription.Chocolates.ChocolateType">
-    <Position X="12.25" Y="8" Width="1.5" />
+  <Enum Name="PresentLibrary.Sweets.Chocolates.ChocolateType">
+    <Position X="12.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAEAAAAABAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SweetsDescription\Chocolates\ChocolateType.cs</FileName>
+      <FileName>Sweets\Chocolates\ChocolateType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PresentLibrary.Sweets.Candys.FillingType">
+    <Position X="12.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAIAAAAIAAIAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sweets\Candys\FillingType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PresentLibrary.Sweets.Waffles.WaffleType">
+    <Position X="12.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAAAAAAAEAAAAAAAAEAACAABAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sweets\Waffles\WaffleType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

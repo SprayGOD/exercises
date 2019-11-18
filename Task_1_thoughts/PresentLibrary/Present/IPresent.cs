@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PresentLibrary.SweetsDescription;
+using PresentLibrary.Sweets;
 
 namespace PresentLibrary.Present
 {
@@ -11,10 +11,10 @@ namespace PresentLibrary.Present
     {
         int GetWeight();
 
-        IList<Sweets> SearchBySugar(double min, double max);
+        IEnumerable<Sweet> SearchBySugar(double min, double max);
 
-        IList<Sweets> SortBySugar();
+        IEnumerable<Sweet> SortBySugar(bool isDescending);
 
-        IList<Sweets> SortByWeight();
+        IEnumerable<Sweet> SortByWeight(bool isDescending);
     }
 }

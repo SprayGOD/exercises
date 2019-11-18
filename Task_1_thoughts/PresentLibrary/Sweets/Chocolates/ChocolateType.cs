@@ -1,4 +1,4 @@
-﻿namespace PresentLibrary.SweetsDescription.Chocolates
+﻿namespace PresentLibrary.Sweets.Chocolates
 {
     public enum ChocolateType
     {

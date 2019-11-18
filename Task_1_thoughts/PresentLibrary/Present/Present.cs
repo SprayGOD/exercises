@@ -4,97 +4,95 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PresentLibrary.SweetsDescription;
+using PresentLibrary.Sweets;
 
 namespace PresentLibrary.Present
 {
-    public class Present : IPresent, ICollection<Sweets>
+    public class Present : IPresent, ICollection<Sweet>
     {
-        private IList<Sweets> CandyCollection { get; set; }
+        private IList<Sweet> candyCollection;
 
-        public Present(string reciever)
+        public Present()
         {
-            CandyCollection = new List<Sweets>();
+            candyCollection = new List<Sweet>();
         }
 
         public int GetWeight()
         {
-            int sum = (from candy in CandyCollection
+            int sum = (from candy in candyCollection
                           select candy.Weight).Sum();
 
             return sum;
         }
 
-        public IList<Sweets> SearchBySugar(double min, double max)
+        public IEnumerable<Sweet> SearchBySugar(double min, double max)
         {
-            IList<Sweets> searchResult = (IList<Sweets>)from item in CandyCollection
+            var searchResult = from item in candyCollection
                                where item.SugarPercentage >= min && item.SugarPercentage <= max
                                select item;
 
             return searchResult;
         }
 
-        public IList<Sweets> SortBySugar()
+        public IEnumerable<Sweet> SortBySugar(bool isDescending)
         {
-            var sortedCollection = from candy in CandyCollection
-                        orderby candy.SugarPercentage descending
-                        select candy;
-
-            return (IList<Sweets>)sortedCollection;
+            if (isDescending)
+                return candyCollection.OrderByDescending(sweet => sweet.SugarPercentage);
+            else
+                return candyCollection.OrderBy(sweet => sweet.SugarPercentage);
         }
 
-        public IList<Sweets> SortByWeight()
+        public IEnumerable<Sweet> SortByWeight(bool isDescending)
         {
-            var sortedCollection = from candy in CandyCollection
-                                   orderby candy.Weight descending
-                                   select candy;
-
-            return (IList<Sweets>)sortedCollection;
+            if (isDescending)
+                return candyCollection.OrderByDescending(sweet => sweet.Weight);
+            else
+                return candyCollection.OrderBy(sweet => sweet.Weight);
         }
 
-        public void Add(Sweets item)
+        public void Add(Sweet item)
         {
-            CandyCollection.Add(item);
+            candyCollection.Add(item);
         }
 
         public void Clear()
         {
-            CandyCollection.Clear();
+            candyCollection.Clear();
         }
 
-        public bool Contains(Sweets item)
+        public bool Contains(Sweet item)
         {
-            return CandyCollection.Contains(item);
+            return candyCollection.Contains(item);
         }
 
         public int Count
         {
-            get { return CandyCollection.Count; }
+            get { return candyCollection.Count; }
         }
 
         public bool IsReadOnly
         {
-            get { return CandyCollection.IsReadOnly; }
+            get { return candyCollection.IsReadOnly; }
         }
 
-        public bool Remove(Sweets item)
+        public bool Remove(Sweet item)
         {
-            return CandyCollection.Remove(item);
+            return candyCollection.Remove(item);
         }
 
-        public void CopyTo(Sweets[] array, int arrayIndex)
+        public void CopyTo(Sweet[] array, int arrayIndex)
         {
-            CandyCollection.CopyTo(array, arrayIndex);
+            candyCollection.CopyTo(array, arrayIndex);
         }
 
-        public IEnumerator<Sweets> GetEnumerator()
+        public IEnumerator<Sweet> GetEnumerator()
         {
-            return CandyCollection.GetEnumerator();
+            return candyCollection.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return (IEnumerator) CandyCollection;
+            return (IEnumerator) candyCollection;
         }
     }
 }

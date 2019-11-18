@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PresentLibrary.SweetsDescription.Candys
+namespace PresentLibrary.Sweets.Candys
 {
     public class Caramel : Candy
     {
@@ -17,7 +17,7 @@ namespace PresentLibrary.SweetsDescription.Candys
             }
             private set
             {
-                if (isValid(value))
+                if (IsValid(value))
                     syrupPercentage = value;
                 else
                     throw new ArgumentException("Invalid value.");

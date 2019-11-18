@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PresentLibrary.SweetsDescription
+namespace PresentLibrary.Sweets
 {
-    public abstract class Sweets
+    public abstract class Sweet
     {
         int sugarPercentage;
         public string Name { get; private set; }
@@ -19,21 +19,21 @@ namespace PresentLibrary.SweetsDescription
             }
             private set
             {
-                if (isValid(value))
+                if (IsValid(value))
                     sugarPercentage = value;
                 else
                     throw new ArgumentException("Invalid value.");
             }
         }
 
-        public Sweets(string name, int weight, int sugarPercentage)
+        public Sweet(string name, int weight, int sugarPercentage)
         {
             Name = name;
             Weight = weight;
             SugarPercentage = sugarPercentage; 
         }
 
-        protected bool isValid(int value)
+        protected bool IsValid(int value)
         {
             if (value < 0 || value > 100)
                 return false;

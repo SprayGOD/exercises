@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PresentLibrary.SweetsDescription.Cookies
+namespace PresentLibrary.Sweets.Cookies
 {
-    public class Cookie : Sweets, ISugarFree
+    public class Cookie : Sweet
     {
-        public bool IsSugarFree { get; set; }
         private int chocolatePercentage;
         public int ChocolatePercentage 
         { 
@@ -18,7 +17,7 @@ namespace PresentLibrary.SweetsDescription.Cookies
             } 
             private set 
             { 
-                if (isValid(value))
+                if (IsValid(value))
                     chocolatePercentage = value; 
                 else 
                     throw new ArgumentException("Invalid value."); 

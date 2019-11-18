@@ -39,23 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SweetsDescription\Candys\ChocolateCandy.cs" />
-    <Compile Include="SweetsDescription\Candys\Candy.cs" />
-    <Compile Include="SweetsDescription\Chocolates\ChocolateType.cs" />
-    <Compile Include="SweetsDescription\IDiabetic.cs" />
-    <Compile Include="SweetsDescription\ISugarFree.cs" />
-    <Compile Include="SweetsDescription\Sweets.cs" />
-    <Compile Include="SweetsDescription\Chocolates\Chocolate.cs" />
-    <Compile Include="SweetsDescription\Cookies\Cookie.cs" />
-    <Compile Include="SweetsDescription\Waffles\Waffle.cs" />
-    <Compile Include="SweetsDescription\Candys\Caramel.cs" />
+    <Compile Include="Sweets\Candys\FillingType.cs" />
+    <Compile Include="Sweets\Candys\GlazedCandy.cs" />
+    <Compile Include="Sweets\Candys\Candy.cs" />
+    <Compile Include="Sweets\Chocolates\ChocolateType.cs" />
+    <Compile Include="Sweets\Sweet.cs" />
+    <Compile Include="Sweets\Chocolates\Chocolate.cs" />
+    <Compile Include="Sweets\Cookies\Cookie.cs" />
+    <Compile Include="Sweets\Waffles\Waffle.cs" />
+    <Compile Include="Sweets\Candys\Caramel.cs" />
     <Compile Include="Present\IPresent.cs" />
     <Compile Include="Present\Present.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sweets\Waffles\WaffleType.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SweetsFactory\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="PresentLibraryDiagram.cd" />
   </ItemGroup>
