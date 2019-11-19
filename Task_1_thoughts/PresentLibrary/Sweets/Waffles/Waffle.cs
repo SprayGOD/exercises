@@ -10,10 +10,15 @@ namespace PresentLibrary.Sweets.Waffles
     {
         public WaffleType WaffleType { get; private set; }
 
-        public Waffle(WaffleType waffleType, string name, int weight, int sugar) : 
-            base(name, weight, sugar)
+        public Waffle(WaffleType waffleType, ManufacturerType manufacturer, int weight, int sugar) :
+            base(manufacturer, weight, sugar)
         {
             WaffleType = waffleType;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + "; waffle type: " + WaffleType;
         }
     }
 }

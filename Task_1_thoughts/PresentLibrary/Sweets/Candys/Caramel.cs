@@ -24,10 +24,14 @@ namespace PresentLibrary.Sweets.Candys
             }
         }
 
-        public Caramel(int syrupPercentage, string name, int weight, int sugar) :
-            base(name, weight, sugar)
+        public Caramel(int syrupPercentage, ManufacturerType manufacturer, int weight, int sugar) :
+            base(manufacturer, weight, sugar)
         {
             SyrupPercentage = syrupPercentage;
+        }
+        public override string ToString()
+        {
+            return base.ToString() + "; syrup percentage: " + SyrupPercentage;
         }
     }
 }

@@ -24,10 +24,15 @@ namespace PresentLibrary.Sweets.Cookies
             }
         }
 
-        public Cookie(int chocolatePercentage, string name, int weight, int sugar) :
-            base(name,  weight, sugar)
+        public Cookie(int chocolatePercentage, ManufacturerType manufacturer, int weight, int sugar) :
+            base(manufacturer, weight, sugar)
         {
             ChocolatePercentage = chocolatePercentage;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + "; chocolate percentage: " + ChocolatePercentage;
         }
     }
 }

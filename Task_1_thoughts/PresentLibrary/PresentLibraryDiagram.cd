@@ -1,13 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="PresentLibrary.Present.Present" BaseTypeListCollapsed="true">
-    <Position X="12.25" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAIACAAACAAAADAQAEAABAQAAAAAAAAEAAAEAABQIAA=</HashCode>
-      <FileName>Present\Present.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
   <Class Name="PresentLibrary.Sweets.Candys.Candy">
     <Position X="6.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
@@ -18,50 +10,58 @@
   <Class Name="PresentLibrary.Sweets.Candys.Caramel">
     <Position X="7.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAgAAAAIAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Sweets\Candys\Caramel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PresentLibrary.Sweets.Candys.GlazedCandy">
     <Position X="5.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Sweets\Candys\GlazedCandy.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PresentLibrary.Sweets.Chocolates.Chocolate">
     <Position X="3" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Sweets\Chocolates\Chocolate.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PresentLibrary.Sweets.Cookies.Cookie">
     <Position X="9.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>gAAAAAAAAAAAAAAEAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Sweets\Cookies\Cookie.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PresentLibrary.Sweets.Sweet">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAgAAAQAACAAAAgAAAAIAAAAAAA=</HashCode>
+      <HashCode>AAgAAAAAAAAAAAAEAAgAAAAAACAAAAgAAAAIAAAAAAA=</HashCode>
       <FileName>Sweets\Sweet.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PresentLibrary.Sweets.Waffles.Waffle">
     <Position X="0.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAEAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Sweets\Waffles\Waffle.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="PresentLibrary.Present.IPresent">
-    <Position X="14" Y="0.5" Width="1.5" />
+  <Class Name="PresentLibrary.Presents.Present" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIACAAACAAAADAQAEAABAQAAAAAAAAEAAAEAABQIAA=</HashCode>
+      <FileName>Presents\Present.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="PresentLibrary.Presents.IPresent">
+    <Position X="14.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAACAAAACAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Present\IPresent.cs</FileName>
+      <FileName>Presents\IPresent.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="PresentLibrary.Sweets.Chocolates.ChocolateType">
@@ -74,7 +74,7 @@
   <Enum Name="PresentLibrary.Sweets.Candys.FillingType">
     <Position X="12.25" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAAAAAAAAIAAAAIAAIAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAEAAAAAAAAAAIAgAAIAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
       <FileName>Sweets\Candys\FillingType.cs</FileName>
     </TypeIdentifier>
   </Enum>

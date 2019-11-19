@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PresentLibrary.Sweets;
 
-namespace PresentLibrary.Present
+namespace PresentLibrary.Presents
 {
     public class Present : IPresent, ICollection<Sweet>
     {
@@ -25,7 +25,7 @@ namespace PresentLibrary.Present
             return sum;
         }
 
-        public IEnumerable<Sweet> SearchBySugar(double min, double max)
+        public IEnumerable<Sweet> SearchBySugar(int min, int max)
         {
             var searchResult = from item in candyCollection
                                where item.SugarPercentage >= min && item.SugarPercentage <= max

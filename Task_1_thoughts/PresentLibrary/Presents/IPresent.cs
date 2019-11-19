@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using PresentLibrary.Sweets;
 
-namespace PresentLibrary.Present
+namespace PresentLibrary.Presents
 {
     interface IPresent
     {
         int GetWeight();
 
-        IEnumerable<Sweet> SearchBySugar(double min, double max);
+        IEnumerable<Sweet> SearchBySugar(int min, int max);
 
         IEnumerable<Sweet> SortBySugar(bool isDescending);
 

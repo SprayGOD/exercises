@@ -10,10 +10,15 @@ namespace PresentLibrary.Sweets.Chocolates
     {
         public ChocolateType ChocolateType { get; private set; }
 
-        public Chocolate(ChocolateType chocolateType, string name, int weight, int sugar) :
-            base(name,  weight, sugar)
+        public Chocolate(ChocolateType chocolateType, ManufacturerType manufacturer, int weight, int sugar) :
+            base(manufacturer, weight, sugar)
         {
             ChocolateType = chocolateType;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + "; chocolate type: " + ChocolateType;
         }
     }
 }

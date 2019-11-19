@@ -8,9 +8,9 @@ namespace PresentLibrary.Sweets.Candys
 {
     public abstract class Candy : Sweet
     {
-        public Candy(string name, int weight, int sugarPercentage)
+        public Candy(ManufacturerType manufacturer, int weight, int sugarPercentage)
             : base
-                (name, weight, sugarPercentage)
+                (manufacturer, weight, sugarPercentage)
         {
         }
     }

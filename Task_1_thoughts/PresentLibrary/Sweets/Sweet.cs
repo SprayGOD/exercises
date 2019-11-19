@@ -9,7 +9,7 @@ namespace PresentLibrary.Sweets
     public abstract class Sweet
     {
         int sugarPercentage;
-        public string Name { get; private set; }
+        public ManufacturerType Manufacturer { get; private set; }
         public int Weight { get; private set; }
         public int SugarPercentage
         {
@@ -26,9 +26,9 @@ namespace PresentLibrary.Sweets
             }
         }
 
-        public Sweet(string name, int weight, int sugarPercentage)
+        public Sweet(ManufacturerType manufacturer, int weight, int sugarPercentage)
         {
-            Name = name;
+            Manufacturer = manufacturer;
             Weight = weight;
             SugarPercentage = sugarPercentage; 
         }
@@ -39,6 +39,11 @@ namespace PresentLibrary.Sweets
                 return false;
             else
                 return true;
+        }
+
+        public override string ToString()
+        {
+            return "Name: " + Manufacturer + "; weight: " + Weight + "; sugar percentage: " + SugarPercentage; 
         }
     }
 }

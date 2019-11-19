@@ -10,10 +10,15 @@ namespace PresentLibrary.Sweets.Candys
     {
         public FillingType Filling { get; private set; }
 
-        public GlazedCandy(FillingType filling, string name, int weight, int sugar) :
-            base(name, weight, sugar)
+        public GlazedCandy(FillingType filling, ManufacturerType manufacturer, int weight, int sugar) :
+            base(manufacturer, weight, sugar)
         {
             Filling = filling;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + "; filling type: " + Filling;
         }
     }
 }
