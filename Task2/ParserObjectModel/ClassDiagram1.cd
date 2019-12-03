@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ParserObjectModel.TextModel.Text" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAABBQAAAABAQAAAAAAAAEAAAAAABQIAA=</HashCode>
+      <FileName>TextModel\Text.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ParserObjectModel.TextModel.Sentence" BaseTypeListCollapsed="true">
+    <Position X="3" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAQAAAAAAQBAAAAACAEAAAAAAAAAAA=</HashCode>
+      <FileName>TextModel\Sentence.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ParserObjectModel.TextModel.SentenceItems.SentenceItem">
+    <Position X="7.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQACAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>TextModel\SentenceItems\SentenceItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParserObjectModel.TextModel.SentenceItems.Word">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAEBAQAAAABAQAEAAAAAAEAAAAAABAIAA=</HashCode>
+      <FileName>TextModel\SentenceItems\Word.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ParserObjectModel.TextModel.SentenceItems.Separator">
+    <Position X="9.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>TextModel\SentenceItems\Separator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ParserObjectModel.TextModel.SentenceType">
+    <Position X="3" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAEAAA=</HashCode>
+      <FileName>TextModel\SentenceType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
