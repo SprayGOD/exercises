@@ -51,17 +51,5 @@ namespace ParserObjectModel.TextModel.SentenceItems
         {
             return (IEnumerator)chars;
         }
-
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-
-            foreach (var item in chars)
-            {
-                sb.Append(item.ToString());
-            }
-
-            return sb.ToString();
-        }
     }
 }

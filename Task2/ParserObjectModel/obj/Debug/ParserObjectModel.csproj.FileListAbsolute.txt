@@ -2,3 +2,6 @@ C:\Users\Admin\Desktop\EPAM Tasks\Task2\ParserObjectModel\bin\Debug\ParserObject
 C:\Users\Admin\Desktop\EPAM Tasks\Task2\ParserObjectModel\bin\Debug\ParserObjectModel.pdb
 C:\Users\Admin\Desktop\EPAM Tasks\Task2\ParserObjectModel\obj\Debug\ParserObjectModel.dll
 C:\Users\Admin\Desktop\EPAM Tasks\Task2\ParserObjectModel\obj\Debug\ParserObjectModel.pdb
+C:\Users\Admin\Desktop\EPAM Tasks\exercises\Task2\ParserObjectModel\obj\Debug\ParserObjectModel.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\EPAM Tasks\exercises\Task2\ParserObjectModel\obj\Debug\ParserObjectModel.dll
+C:\Users\Admin\Desktop\EPAM Tasks\exercises\Task2\ParserObjectModel\obj\Debug\ParserObjectModel.pdb

@@ -12,21 +12,12 @@ namespace ParserObjectModel.TextModel.SentenceItems
 
         public static readonly IList<char> OtherPunctuationSeparator = new List<char>() { ',', ';', ':', '(', ')', '[', ']', '{', '}' };
 
+        public PunctuationMark()
+        { }
+
         public PunctuationMark(char separator)
         {
             chars.Add(new Symbol(separator));
-        }
-
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-
-            foreach (var item in chars)
-            {
-                sb.Append(item);
-            }
-
-            return sb.ToString();
         }
     }
 }

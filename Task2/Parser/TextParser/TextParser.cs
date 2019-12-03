@@ -10,7 +10,7 @@ using ParserObjectModel.TextModel.SentenceItems;
 
 namespace Parser.TextParser
 {
-    public class TextParser : IParser
+    public class TextParser : IParser, IDisposable
     {
         private StreamReader streamReader;
 
@@ -23,26 +23,19 @@ namespace Parser.TextParser
         {
             var text = new Text();
             var sentence = new Sentence();
+            var word = new Word();
+            var punctuationMark = new PunctuationMark();
             
             string line = String.Empty;
-            int index = 0;
+            string[] splitted;
 
             try
             {
-                while((line += streamReader.ReadLine()) != null)
+                while ((line += streamReader.ReadLine()) != null)
                 {
-                    foreach (var item in line)
-                    {
-                        if(!PunctuationMark.EndPunctuationSeparator.Contains(item))
-                        {
-                            continue;
-                        }
-                        else
-                        {
-                            sentence = GetSentence(line, ref index);
-                            text.Add(sentence);
-                        }
-                    }
+
+                    sentence = GetSentence(line);
+
                 }
             }
             catch(Exception ex)
@@ -54,26 +47,51 @@ namespace Parser.TextParser
         }
 
 
-        private Sentence GetSentence(string line, ref int index)
+        private Sentence GetSentence(string line)
         {
-            Sentence sentence = new Sentence();
-            string[] splitted = 
-            
-            
+            Sentence sentence;
+            SentenceItem sentenceItem; 
+            string[] splitted = line.Split(new char[] { ' ' });
+
+            foreach (var item in splitted)
+            {
+                sentenceItem = GetSentenceItem(item);
+            }
+
             return sentence;
         }
 
 
-        private Word GetWord(string line, ref int index)
+        private SentenceItem GetSentenceItem(string subline)
         {
-            Word word = new Word();
-
-            while(Char.IsWhiteSpace(line[index]) != true)
-            {
-                //word.Add(line[index]);
-            }
+            
+ 
 
             return word;
+        }
+
+
+        private bool disposedValue = false; 
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposedValue)
+            {
+                if (disposing)
+                {
+                    if (streamReader != null)
+                        streamReader.Dispose();
+                }
+
+
+                disposedValue = true;
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 

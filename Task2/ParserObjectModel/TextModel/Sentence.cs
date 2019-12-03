@@ -81,5 +81,18 @@ namespace ParserObjectModel.TextModel
 
             return sb.ToString();
         }
+
+        public HashSet<SentenceItem> GetWordsByLength(int length)
+        {
+            HashSet<SentenceItem> words = new HashSet<SentenceItem>();
+            foreach (var sentenceItem in SentenceItems)
+            {
+                if (sentenceItem is Word)
+                    if (sentenceItem.Count == length)
+                        words.Add(sentenceItem);
+            }
+
+            return words;
+        }
     }
 }

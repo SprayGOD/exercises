@@ -9,3 +9,14 @@ C:\Users\Admin\Desktop\EPAM Tasks\Task2\Exercise1\bin\Debug\ParserObjectModel.dl
 C:\Users\Admin\Desktop\EPAM Tasks\Task2\Exercise1\bin\Debug\ParserObjectModel.pdb
 C:\Users\Admin\Desktop\EPAM Tasks\Task2\Exercise1\bin\Debug\Parser.pdb
 C:\Users\Admin\Desktop\EPAM Tasks\Task2\Exercise1\obj\Debug\Exercise1.csproj.CopyComplete
+C:\Users\Admin\Desktop\EPAM Tasks\exercises\Task2\Exercise1\bin\Debug\Exercise1.exe.config
+C:\Users\Admin\Desktop\EPAM Tasks\exercises\Task2\Exercise1\bin\Debug\Exercise1.exe
+C:\Users\Admin\Desktop\EPAM Tasks\exercises\Task2\Exercise1\bin\Debug\Exercise1.pdb
+C:\Users\Admin\Desktop\EPAM Tasks\exercises\Task2\Exercise1\bin\Debug\Parser.dll
+C:\Users\Admin\Desktop\EPAM Tasks\exercises\Task2\Exercise1\bin\Debug\ParserObjectModel.dll
+C:\Users\Admin\Desktop\EPAM Tasks\exercises\Task2\Exercise1\bin\Debug\ParserObjectModel.pdb
+C:\Users\Admin\Desktop\EPAM Tasks\exercises\Task2\Exercise1\bin\Debug\Parser.pdb
+C:\Users\Admin\Desktop\EPAM Tasks\exercises\Task2\Exercise1\obj\Debug\Exercise1.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\EPAM Tasks\exercises\Task2\Exercise1\obj\Debug\Exercise1.csproj.CopyComplete
+C:\Users\Admin\Desktop\EPAM Tasks\exercises\Task2\Exercise1\obj\Debug\Exercise1.exe
+C:\Users\Admin\Desktop\EPAM Tasks\exercises\Task2\Exercise1\obj\Debug\Exercise1.pdb

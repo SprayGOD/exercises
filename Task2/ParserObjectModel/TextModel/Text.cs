@@ -84,9 +84,17 @@ namespace ParserObjectModel.TextModel
             return Sentences.OrderBy(s => s.SentenceItems.OfType<Word>().Count());
         }
 
-        public IEnumerable GetWordsByLengthInInterrogativeSentences()
+        public IEnumerable GetWordsByLengthInInterrogativeSentences(int length)
         {
-                                                                                                                   
+            HashSet<SentenceItem> hash = new HashSet<SentenceItem>();
+
+            foreach (var sentence in Sentences)
+            {
+                if (sentence.SentenceType == SentenceType.Interrogative)
+                    hash = sentence.GetWordsByLength(length);
+            }
+
+            return hash;
         }
     }
 }

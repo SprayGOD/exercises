@@ -22,5 +22,17 @@ namespace ParserObjectModel.TextModel.SentenceItems
         {
             return chars.Contains(item);
         }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var item in chars)
+            {
+                sb.Append(item);
+            }
+
+            return sb.ToString();
+        }
     }
 }
