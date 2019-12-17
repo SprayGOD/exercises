@@ -18,12 +18,13 @@ namespace SimplifiedATS.AS.Impl
 
         public void ChangeState(object sender, CallData callData)
         {
-            State = PortState.Busy;
+            State = PortState.Free;
+            StateChanged?.Invoke(this, callData);
         }
 
         public void ChangeState(object sender, Responce responce)
         {
-            State = responce.state;
+            State = responce.State;
         }
 
         public void StateChanging(object sender,CallData callData)

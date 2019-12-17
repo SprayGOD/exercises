@@ -24,7 +24,7 @@ namespace SimplifiedATS.AS.Impl
 
         public void EndCall()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Call ended");
         }
 
         public void Answer(Responce responce)

@@ -8,7 +8,7 @@ namespace SimplifiedATS.Helpers
 {
     public struct Responce
     {
-        public PortState state { get; set; }
-        public PhoneNumber source { get; set; }
+        public PortState State { get; set; }
+        public PhoneNumber Source { get; set; }
     }
 }

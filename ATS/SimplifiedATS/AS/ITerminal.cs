@@ -8,6 +8,7 @@ namespace SimplifiedATS.AS
 {
     public interface ITerminal
     {
+        public PhoneNumber Number { get; }
         public event EventHandler<CallData> OutgoingCall;
         public event EventHandler<Responce> IncomingCall;
 

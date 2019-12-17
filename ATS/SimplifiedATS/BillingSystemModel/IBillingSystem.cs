@@ -4,7 +4,8 @@ using System.Text;
 
 namespace SimplifiedATS.BillingSystemModel
 {
-    interface IBillingSystem
+    public interface IBillingSystem
     {
+        int GetCallCost();
     }
 }

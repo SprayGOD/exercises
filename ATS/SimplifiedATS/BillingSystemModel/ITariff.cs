@@ -4,7 +4,8 @@ using System.Text;
 
 namespace SimplifiedATS.BillingSystemModel
 {
-    interface ITariff
+    public interface ITariff
     {
+        public int CostPerMinute { get; }
     }
 }
