@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using SimplifiedATS.Helpers;
+using SimplifiedATS.AS.States;
 
 namespace SimplifiedATS.AS.Impl
 {
@@ -9,6 +10,7 @@ namespace SimplifiedATS.AS.Impl
     {
         public PhoneNumber Number { get; }
         public event EventHandler<CallData> OutgoingCall;
+        public event EventHandler<Responce> IncomingCall;
 
         public Terminal(PhoneNumber number)
         {
@@ -17,7 +19,7 @@ namespace SimplifiedATS.AS.Impl
 
         public void Call(PhoneNumber number)
         {
-            OnOutgoingCall(this, new CallData(Number, number));
+            OnOutgoingCall(new CallData(Number, number));
         }
 
         public void EndCall()
@@ -25,14 +27,24 @@ namespace SimplifiedATS.AS.Impl
             throw new NotImplementedException();
         }
 
+        public void Answer(Responce responce)
+        {
+            OnIncomingCall(responce);
+        }
+
         public void TurnOnOff()
         {
             throw new NotImplementedException();
         }
 
-        protected virtual void OnOutgoingCall(object sender, CallData callData)
+        private void OnOutgoingCall(CallData callData)
         {
             OutgoingCall?.Invoke(this, callData);
+        }
+
+        private void OnIncomingCall(Responce responce)
+        {
+            IncomingCall?.Invoke(this, responce);
         }
     }
 }

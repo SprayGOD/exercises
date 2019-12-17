@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using SimplifiedATS;
+using SimplifiedATS.AS.States;
 using SimplifiedATS.Helpers;
 using SimplifiedATS.AS;
 
@@ -30,18 +31,33 @@ namespace SimplifiedATS.AS.Impl
             PhoneNumber number = new PhoneNumber((_userID + _baseNumber).ToString());
             IPort port = new Port();
             ITerminal terminal = new Terminal(number);
+            user.Terminal = terminal;
             _agreements.Add(new Agreement(user, number));
             _portsMap.Add(number, port);
             _ports.Add(port);
             _terminals.Add(terminal);
-
         }
 
-        public EventHandler<CallData> EstablishConnection;
-        public void Call(Terminal terminal)
+        public void SubscribeForPortEventHanlder(Port port)
         {
-            terminal.OutgoingCall
+            port.StateChanged += CheckPortAvailability;
         }
+
+        public void CheckPortAvailability(object sender, CallData callData)
+        {
+            if(_portsMap.ContainsKey(callData.Target))
+            {
+                IPort port = new Port();
+                _portsMap.TryGetValue(callData.Target, out port);
+                if(port.State == PortState.Free)
+                {
+
+                }
+            }
+        }
+
+        public event EventHandler<CallData> EstablishConnection;
+        
 
 
     }
