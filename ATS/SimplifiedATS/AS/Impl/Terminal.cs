@@ -10,7 +10,8 @@ namespace SimplifiedATS.AS.Impl
     {
         public PhoneNumber Number { get; }
         public event EventHandler<CallData> OutgoingCall;
-        public event EventHandler<Responce> IncomingCall;
+        public event EventHandler<ConnectionResponse> CurrentConnection;
+        public event EventHandler<Response> Response;
 
         public Terminal(PhoneNumber number)
         {
@@ -24,27 +25,38 @@ namespace SimplifiedATS.AS.Impl
 
         public void EndCall()
         {
-            Console.WriteLine("Call ended");
+            OnCurrentConnection(ConnectionResponse.Drop);
         }
 
-        public void Answer(Responce responce)
+        public void Answer()
         {
-            OnIncomingCall(responce);
+            OnCurrentConnection(ConnectionResponse.Answer);
         }
 
-        public void TurnOnOff()
+        public void TurnOn()
         {
-            throw new NotImplementedException();
+            OnTerminalStateChange(new Response(PortState.Free));
         }
+
+        public void TurnOff()
+        {
+            OnTerminalStateChange(new Response(PortState.Unpluged));
+        }
+
 
         private void OnOutgoingCall(CallData callData)
         {
             OutgoingCall?.Invoke(this, callData);
         }
 
-        private void OnIncomingCall(Responce responce)
+        private void OnTerminalStateChange(Response response)
         {
-            IncomingCall?.Invoke(this, responce);
+            Response?.Invoke(this, response);
+        }
+
+        private void OnCurrentConnection(ConnectionResponse connectionResponse)
+        {
+            CurrentConnection?.Invoke(this, connectionResponse);
         }
     }
 }

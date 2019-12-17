@@ -8,23 +8,30 @@ namespace SimplifiedATS.AS.Impl
 {
     public class Port : IPort
     {
-        public PortState State { get; set; }
+        public PortState State { get; set; } = PortState.Unpluged;
         public event EventHandler<CallData> StateChanged;
+        public event EventHandler<ConnectionResponse> CurrentConnectionChange;
         public void SubscribeForTerminalEventHandlers(ITerminal terminal)
         {
-            terminal.OutgoingCall += ChangeState;
-            terminal.IncomingCall += ChangeState;
+            terminal.OutgoingCall += CallStateChange;
+            terminal.Response +=ResponseChangeState;
+            terminal.CurrentConnection += OnCurrentConnectionChange;
         }
 
-        public void ChangeState(object sender, CallData callData)
+        public void CallStateChange(object sender, CallData callData)
         {
-            State = PortState.Free;
+            State = PortState.Busy;
             StateChanged?.Invoke(this, callData);
         }
 
-        public void ChangeState(object sender, Responce responce)
+        public void ResponseChangeState(object sender, Response responce)
         {
             State = responce.State;
+        }
+
+        public void OnCurrentConnectionChange(object sender, ConnectionResponse connectionResponse)
+        {
+            CurrentConnectionChange?.Invoke(this, connectionResponse);
         }
 
         public void StateChanging(object sender,CallData callData)

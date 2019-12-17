@@ -43,11 +43,13 @@ namespace SimplifiedATS.AS.Impl
             _terminals.Add(terminal);
             port.SubscribeForTerminalEventHandlers(terminal);
             SubscribeForPortEventHanlder(port);
+
         }
 
         public void SubscribeForPortEventHanlder(IPort port)
         {
             port.StateChanged += TryToCall;
+            port.CurrentConnectionChange += ChangeCallState;
         }
 
         public void TryToCall(object sender, CallData callData)
@@ -61,8 +63,8 @@ namespace SimplifiedATS.AS.Impl
                     targetPort.State = PortState.Busy;
                     IPort sourcePort;
                     _portsMap.TryGetValue(callData.Source, out sourcePort);
-                    sourcePort.State = PortState.Busy;
-                    Console.WriteLine("Call started");
+                    //sourcePort.State = PortState.Busy;
+                    _billingSystem.CallRecording(this, callData);
                 }
                 else
                 {
@@ -74,6 +76,11 @@ namespace SimplifiedATS.AS.Impl
             {
                 Console.WriteLine("This number does not exist.");
             }
+        }
+
+        public void ChangeCallState(object sender, ConnectionResponse connectionResponse)
+        {
+
         }
 
         public event EventHandler<CallData> EstablishConnection;

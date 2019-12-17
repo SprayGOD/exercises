@@ -9,7 +9,8 @@ namespace SimplifiedATS.BillingSystemModel.Impl
     {
         public IList<ITariff> Tariffs { get; }
         protected IList<CallData> _callRecords;
-        public event EventHandler<CallData> CallRecording;
+        public event EventHandler<CallData> StartCall;
+        public event EventHandler<CallData> EndCall;
 
         public BillingSystem()
         {
@@ -20,14 +21,19 @@ namespace SimplifiedATS.BillingSystemModel.Impl
             throw new NotImplementedException();
         }
 
-        public void CallStarted(object sender, CallData callData)
+        public void CallRecording(object sender, CallData callData)
         {
-            OnCallStarted(sender, callData);
+            
         }
 
-        protected void OnCallStarted(object sender, CallData callData)
+        private void OnCallStart(object sender, CallData callData)
         {
-            CallRecording?.Invoke(sender, callData);
+            StartCall?.Invoke(sender, callData);
+        }
+
+        private void OnEndCall(object sender, CallData callData)
+        {
+
         }
     }
 }
