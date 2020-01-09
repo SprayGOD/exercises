@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BL.SalesApp
+namespace SalesApp.BLL
 {
     public class Class1
     {

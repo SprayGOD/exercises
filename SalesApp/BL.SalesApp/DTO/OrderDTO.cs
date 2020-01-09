@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BL.SalesApp.DTO
+namespace SalesApp.BLL.DTO
 {
     public class OrderDTO
     {

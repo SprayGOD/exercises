@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL.SalesApp.Models;
+using SalesApp.DAL.Models;
 
-namespace DAL.SalesApp
+namespace SalesApp.DAL
 {
     public class SalesContext : DbContext
     {

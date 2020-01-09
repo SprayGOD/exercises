@@ -47,7 +47,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,6 +69,10 @@
     <ProjectReference Include="..\DAL.SalesApp\SalesApp.DAL.csproj">
       <Project>{1633d18c-6071-4f5c-85fa-679ef02335ab}</Project>
       <Name>SalesApp.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SalesApp.FileProcessor\SalesApp.FileProcessor.csproj">
+      <Project>{9e7a90a0-0ef3-4319-a84a-8e0b5dc7a3b8}</Project>
+      <Name>SalesApp.FileProcessor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

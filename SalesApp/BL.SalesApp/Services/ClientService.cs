@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SalesApp.DAL.Models
+namespace BL.SalesApp.Services
 {
-    public class Item
+    public class ClientService
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
     }
 }
