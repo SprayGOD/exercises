@@ -12,7 +12,7 @@ namespace SalesApp.BLL.Services
 {
     public class ItemService
     {
-        IRepository<Item> _itemRepository;
+        private ItemRepository _itemRepository;
 
         public ItemService(string connectionString)
         {
@@ -44,6 +44,12 @@ namespace SalesApp.BLL.Services
                 throw new Exception("Order not found.");
 
             return new ItemDTO { Id = item.Id, Name = item.Name };
+        }
+
+        public IEnumerable<ItemDTO> Find(Func<Item, bool> predicate)
+        {
+            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Item, ItemDTO>()).CreateMapper();
+            return mapper.Map<IEnumerable<Item>, List<ItemDTO>>(_itemRepository.Find(predicate));
         }
     }
 }

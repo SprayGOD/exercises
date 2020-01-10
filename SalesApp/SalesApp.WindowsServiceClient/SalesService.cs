@@ -12,7 +12,7 @@ namespace SalesApp.WindowsServiceClient
 {
     public partial class SalesService : ServiceBase
     {
-        SalesInfoProcessor salesInfoProcessor = new SalesInfoProcessor();
+        //SalesInfoProcessor salesInfoProcessor = new SalesInfoProcessor();
         public SalesService()
         {
             InitializeComponent();
@@ -20,7 +20,7 @@ namespace SalesApp.WindowsServiceClient
 
         protected override void OnStart(string[] args)
         {
-            salesInfoProcessor.Start();
+            //salesInfoProcessor.Start();
         }
 
         protected override void OnStop()

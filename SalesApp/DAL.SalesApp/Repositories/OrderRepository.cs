@@ -18,6 +18,12 @@ namespace SalesApp.DAL.Repositories
         public void Create(Order order)
         {
             _salesContext.Orders.Add(order);
+            _salesContext.SaveChanges();
+        }
+
+        public IEnumerable<Order> Find(Func<Order, bool> predicate)
+        {
+            return _salesContext.Orders.Where(predicate).ToList();
         }
 
         public Order Get(int id)

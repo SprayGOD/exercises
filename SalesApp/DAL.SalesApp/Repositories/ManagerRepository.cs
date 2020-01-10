@@ -20,6 +20,11 @@ namespace SalesApp.DAL.Repositories
             _salesContext.Managers.Add(manager);
         }
 
+        public IEnumerable<Manager> Find(Func<Manager, bool> predicate)
+        {
+            return _salesContext.Managers.Where(predicate).ToList();
+        }
+
         public Manager Get(int id)
         {
             return _salesContext.Managers.Find(id);

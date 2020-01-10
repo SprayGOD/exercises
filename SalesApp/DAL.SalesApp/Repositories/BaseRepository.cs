@@ -23,7 +23,7 @@ namespace SalesApp.DAL.Repositories
             {
                 if (disposing)
                 {
-                    // TODO: dispose managed state (managed objects).
+                    _salesContext.Dispose();
                 }
 
                 disposedValue = true;

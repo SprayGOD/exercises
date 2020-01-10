@@ -12,7 +12,7 @@ namespace SalesApp.BLL.Services
 {
     public class ClientService
     {
-        IRepository<Client> _clientRepository;
+        private ClientRepository _clientRepository;
 
         public ClientService(string connectionString)
         {
@@ -31,19 +31,25 @@ namespace SalesApp.BLL.Services
             }
         }
 
-        public IEnumerable<ClientDTO> GetOrders()
+        public IEnumerable<ClientDTO> GetClients()
         {
             var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Client, ClientDTO>()).CreateMapper();
             return mapper.Map<IEnumerable<Client>, List<ClientDTO>>(_clientRepository.GetAll());
         }
 
-        public ClientDTO GetOrder(int id)
+        public ClientDTO GetClient(int id)
         {
             var client = _clientRepository.Get(id);
             if (client == null)
                 throw new Exception("Order not found.");
 
             return new ClientDTO { Id = client.Id, Name = client.Name };
+        }
+
+        public IEnumerable<ClientDTO> Find(Func<Client, bool> predicate)
+        {
+            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Client, ClientDTO>()).CreateMapper();
+            return mapper.Map<IEnumerable<Client>, List<ClientDTO>>(_clientRepository.Find(predicate));
         }
     }
 }

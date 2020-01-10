@@ -52,6 +52,15 @@ namespace SalesApp.FileProcessor.CsvParser
             return itemViews;
         }
 
+        public IEnumerable<int> ToOrderSums(IEnumerable<CsvModel> csvModels)
+        {
+            IList<int> sums = new List<int>();
 
+            foreach (var item in csvModels)
+            {
+                sums.Add(item.Sum);
+            }
+            return sums;
+        }
     }
 }

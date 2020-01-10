@@ -12,7 +12,7 @@ namespace SalesApp.BLL.Services
 {
     public class ManagerService
     {
-        IRepository<Manager> _managerRepository;
+        private ManagerRepository _managerRepository;
 
         public ManagerService(string connectionString)
         {
@@ -41,9 +41,15 @@ namespace SalesApp.BLL.Services
         {
             var manager = _managerRepository.Get(id);
             if (manager == null)
-                throw new Exception("Order not found.");
+                throw new Exception("Manager not found.");
 
             return new ManagerDTO { Id = manager.Id, SecondName = manager.SecondName };
+        }
+
+        public IEnumerable<ManagerDTO> Find(Func<Manager, bool> predicate)
+        {
+            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Manager, ManagerDTO>()).CreateMapper();
+            return mapper.Map<IEnumerable<Manager>, List<ManagerDTO>>(_managerRepository.Find(predicate));
         }
     }
 }

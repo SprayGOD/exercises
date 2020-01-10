@@ -21,6 +21,11 @@ namespace SalesApp.DAL.Repositories
             _salesContext.Clients.Add(client);
         }
 
+        public IEnumerable<Client> Find(Func<Client, bool> predicate)
+        {
+            return _salesContext.Clients.Where(predicate).ToList();
+        }
+
         public Client Get(int id)
         {
             return _salesContext.Clients.Find(id);

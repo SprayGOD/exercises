@@ -67,6 +67,10 @@
       <Project>{7b47b0ac-a7e9-46c5-8127-73c03e053de4}</Project>
       <Name>SalesApp.BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SalesApp.FileProcessor\SalesApp.FileProcessor.csproj">
+      <Project>{9e7a90a0-0ef3-4319-a84a-8e0b5dc7a3b8}</Project>
+      <Name>SalesApp.FileProcessor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
