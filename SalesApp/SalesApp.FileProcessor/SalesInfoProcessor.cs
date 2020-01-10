@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SalesApp.FileProcessor.CsvParser;
 
-namespace SalesApp.WindowsServiceClient
+namespace SalesApp.FileProcessor
 {
     public class SalesInfoProcessor
     {
@@ -17,5 +18,10 @@ namespace SalesApp.WindowsServiceClient
 
         public void Stop()
         { }
+
+        private void OnCreated(CsvModel )
+        {
+
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SalesApp.DAL.Models;
+using SalesApp.DAL;
 using System.Data.Entity;
 
 namespace SalesApp.DAL.Repositories
@@ -34,7 +35,5 @@ namespace SalesApp.DAL.Repositories
         {
             _salesContext.Entry(client).State = EntityState.Modified;
         }
-
-
     }
 }

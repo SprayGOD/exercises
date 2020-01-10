@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SalesApp.DAL.Models
+namespace SalesApp.FileProcessor.Views
 {
-    public class Client
+    public class ManagerView
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string SecondName { get; set; }
     }
 }

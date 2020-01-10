@@ -27,6 +27,7 @@ namespace SalesApp.BLL.Services
                 IMapper mapper = config.CreateMapper();
 
                 _orderRepository.Create(mapper.Map<OrderDTO,Order>(orderDto));
+                _orderRepository.Save();
             }
         }
 

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SalesApp.DAL.Models
+namespace SalesApp.FileProcessor.Views
 {
-    public class Client
+    public class ClientView
     {
         public int Id { get; set; }
         public string Name { get; set; }
